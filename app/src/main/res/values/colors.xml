@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="mainTheme">#FFD84D</color>
+    <color name="fragment_login_button">#212121</color>
+    <color name="fragment_register_editText">#0F0F0F</color>
+    <color name="fragment_login_textView">#090909</color>
+    <color name="fragment_register_textView_verification">#090909</color>
+    <color name="fragment_register_textView_press">#DCDCDC</color>
+    <color name="fragment_register_textView_backLogin">#3C3C3C</color>
+    <color name="dialog_push_textView">#000000</color>
+    <color name="fragment_personal_frameLayout">#4A4A4A</color>
+    <color name="dialog_config_background">#DCDCDC</color>
+    <color name="fragment_personal_textView_level">#000000</color>
+    <color name="fragment_personal_textView_levelBackground">#66CDAA</color>
+    <color name="toolBar_background">#515151</color>
+    <color name="fragment_goodsItem_textView_comeOver">#DFDFDF</color>
+    <color name="fragment_myData_background">#F0F0F0</color>
+</resources>

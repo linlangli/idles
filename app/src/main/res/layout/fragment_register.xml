@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/fragment_register_imageView_account"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@id/fragment_register_editText_email"
+        app:layout_constraintStart_toStartOf="@id/fragment_register_editText_email"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_email"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_hand_big"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/fragment_register_editText_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="320dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:hint="@string/fragment_register_editText_email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textSize="15sp"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/fragment_register_editText_verification"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/fragment_register_editText_email"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_email"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_editText_email"
+        android:layout_marginTop="25dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:hint="@string/fragment_register_editText_verification"
+        android:maxLines="1"
+        android:digits="@string/fragment_register_editText_verificationType"
+        android:textSize="15sp"
+        android:importantForAutofill="no"
+        tools:ignore="TextFields" />
+
+
+    <TextView
+        android:id="@+id/fragment_register_textView_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_verification"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_register_editText_email"
+        android:layout_marginBottom="15dp"
+        android:text="@string/fragment_register_textView_verification"
+        android:textColor="@color/fragment_register_textView_verification"/>
+
+    <TextView
+        android:id="@+id/fragment_register_textView_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_verification"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_register_editText_verification"
+        android:layout_marginBottom="15dp"
+        android:text="@string/fragment_register_textView_verify"
+        android:textColor="@color/fragment_register_textView_verification"/>
+
+
+    <EditText
+        android:id="@+id/fragment_register_editText_password"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/fragment_register_editText_email"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_email"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_editText_verification"
+        android:layout_marginTop="30dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone"
+        android:hint="@string/fragment_register_editText_password"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:textSize="15sp"
+        android:importantForAutofill="no" />
+
+
+    <EditText
+        android:id="@+id/fragment_register_editText_secondPassword"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/fragment_register_editText_email"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_email"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_editText_password"
+        android:layout_marginTop="25dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone"
+        android:hint="@string/fragment_register_editText_secondPassword"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:textSize="15sp"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/fragment_register_textView_backLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_email"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_editText_verification"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/fragment_register_textView_backLogin"
+        android:textSize="12sp"
+        android:text="@string/fragment_register_textView_backLogin"/>
+
+    <Button
+        android:id="@+id/fragment_register_button_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/fragment_register_editText_email"
+        app:layout_constraintEnd_toEndOf="@id/fragment_register_editText_email"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_editText_secondPassword"
+        android:layout_marginTop="35dp"
+        android:visibility="gone"
+        android:background="@drawable/fragment_login_button_login"
+        android:text="@string/fragment_register_textView_register"
+        android:textColor="@android:color/white"/>
+
+    <io.github.grooters.idles.view.widget.LoadingWidget
+        android:id="@+id/fragment_register_widget_loading"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

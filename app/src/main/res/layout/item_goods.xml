@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/item_goods_frameLayout_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_goods_frame"/>
+
+    <ImageView
+        android:id="@+id/item_goods_imageView_commodity"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/item_goods_frameLayout_background"
+        app:layout_constraintStart_toStartOf="@id/item_goods_frameLayout_background"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_frameLayout_background"
+        android:layout_margin="18dp"
+        android:src="@mipmap/ic_launcher_round"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_imageView_commodity"
+        app:layout_constraintTop_toTopOf="@id/item_goods_imageView_commodity"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/item_goods_imageView_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_textView_name"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_textView_name"
+        android:src="@drawable/ic_price"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="15dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_imageView_price"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_textView_name"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/item_goods_textView_name"
+        app:layout_constraintTop_toBottomOf="@id/item_goods_textView_name"
+        android:layout_marginTop="8dp"
+        android:text="@string/item_goods_textView_time"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_textView_time"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_textView_time"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/item_goods_textView_time"
+        app:layout_constraintTop_toBottomOf="@id/item_goods_textView_time"
+        android:layout_marginTop="10dp"
+        android:text="@string/item_goods_textView_location"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_location_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_textView_location"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_textView_location"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/item_goods_imageView_seller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_goods_textView_location"
+        app:layout_constraintStart_toStartOf="@id/item_goods_textView_location"
+        android:src="@drawable/ic_avatar_test"
+        android:layout_marginTop="12dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_seller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_imageView_seller"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_imageView_seller"
+        android:layout_marginStart="6dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_need_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_textView_seller_name"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_imageView_seller"
+        android:layout_marginStart="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_goods_textView_need_num"
+        app:layout_constraintBottom_toBottomOf="@id/item_goods_imageView_seller"
+        android:text="@string/item_goods_textView_need"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_goods_textView_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_goods_textView_need_num"
+        app:layout_constraintStart_toStartOf="@id/item_goods_imageView_seller"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginTop="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

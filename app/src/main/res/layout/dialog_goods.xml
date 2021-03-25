@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="380dp"
+    android:layout_height="380dp">
+
+
+    <EditText
+        android:id="@+id/dialog_goods_editText_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="300dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/dialog_goods_editText_name"
+        android:maxLines="1"
+        android:inputType="text"
+        android:textSize="15sp"
+        android:importantForAutofill="no" />
+
+    <ImageButton
+        android:id="@+id/dialog_goods_imageButton_push"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_release"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/dialog_goods_imageButton_push_contentDescription" />
+
+    <EditText
+        android:id="@+id/dialog_goods_editText_price"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/dialog_goods_editText_name"
+        app:layout_constraintTop_toBottomOf="@id/dialog_goods_editText_name"
+        android:layout_marginTop="10dp"
+        android:hint="@string/dialog_goods_editText_price"
+        android:maxLines="1"
+        android:inputType="number"
+        android:textSize="12sp"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/dialog_goods_editText_time"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/dialog_goods_editText_time"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_goods_editText_price"
+        app:layout_constraintStart_toEndOf="@id/dialog_goods_editText_price"
+        app:layout_constraintEnd_toEndOf="@id/dialog_goods_editText_name"
+        android:maxLines="1"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"/>
+
+    <EditText
+        android:id="@+id/dialog_goods_editText_location"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/dialog_goods_editText_location"
+        app:layout_constraintTop_toBottomOf="@id/dialog_goods_editText_time"
+        app:layout_constraintStart_toStartOf="@id/dialog_goods_editText_name"
+        app:layout_constraintEnd_toEndOf="@id/dialog_goods_editText_name"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/dialog_goods_editText_description"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:hint="@string/dialog_goods_editText_description"
+        app:layout_constraintTop_toBottomOf="@id/dialog_goods_editText_location"
+        app:layout_constraintStart_toStartOf="@id/dialog_goods_editText_name"
+        app:layout_constraintEnd_toEndOf="@id/dialog_goods_editText_name"
+        android:layout_marginTop="15dp"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:textSize="13sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/dialog_goods_edit"/>
+
+    <Button
+        android:id="@+id/dialog_goods_button_titleImage"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/dialog_goods_button_titleImage"
+        app:layout_constraintTop_toBottomOf="@id/dialog_goods_editText_description"
+        app:layout_constraintStart_toStartOf="@id/dialog_goods_editText_description"
+        app:layout_constraintEnd_toStartOf="@id/dialog_goods_button_introImage"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/dialog_goods_button"/>
+
+    <Button
+        android:id="@+id/dialog_goods_button_introImage"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/dialog_goods_button_introImage"
+        app:layout_constraintTop_toTopOf="@id/dialog_goods_button_titleImage"
+        app:layout_constraintStart_toEndOf="@id/dialog_goods_button_titleImage"
+        app:layout_constraintEnd_toStartOf="@id/dialog_goods_button_introVideo"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/dialog_goods_button"/>
+
+    <Button
+        android:id="@+id/dialog_goods_button_introVideo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/dialog_goods_button_video"
+        app:layout_constraintTop_toTopOf="@id/dialog_goods_button_titleImage"
+        app:layout_constraintStart_toEndOf="@id/dialog_goods_button_introImage"
+        app:layout_constraintEnd_toEndOf="@id/dialog_goods_editText_description"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/dialog_goods_button"/>
+
+    <TextView
+        android:id="@+id/dialog_goods_textView_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:text="@string/dialog_goods_textView_loading"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

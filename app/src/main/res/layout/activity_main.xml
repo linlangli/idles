@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activity.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/widget_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/main_frame_fragment_container"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_imageButton_goods"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageButton
+        android:id="@+id/activity_main_imageButton_goods"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_goods_press"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_main_imageButton_works"
+        android:padding="10dp"
+        android:contentDescription="@string/activity_main_imageButton_goods_contentDescription" />
+
+    <ImageButton
+        android:id="@+id/activity_main_imageButton_works"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_works"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/activity_main_imageButton_goods"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main_imageButton_goods"
+        app:layout_constraintEnd_toStartOf="@id/activity_main_imageButton_push"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/activity_main_imageButton_works_contentDescription" />
+
+    <ImageButton
+        android:id="@+id/activity_main_imageButton_push"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_release"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/activity_main_imageButton_works"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main_imageButton_goods"
+        app:layout_constraintEnd_toStartOf="@id/activity_main_imageButton_message"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/activity_main_imageButton_push_contentDescription" />
+
+    <ImageButton
+        android:id="@+id/activity_main_imageButton_message"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_message"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/activity_main_imageButton_push"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main_imageButton_goods"
+        app:layout_constraintEnd_toStartOf="@id/activity_main_imageButton_personal"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/activity_main_imageButton_personal"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_personal"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/activity_main_imageButton_message"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main_imageButton_goods"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

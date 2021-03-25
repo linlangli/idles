@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_goodsWorks_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_goodsWorks_imageButton_goods"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/fragment_goodsWorks_imageButton_goods"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fragment_goodsWorks_textView_dividing"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_goods"
+        app:layout_constraintHorizontal_weight="5"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/fragment_goodsWorks_imageButton_goods" />
+
+    <TextView
+        android:id="@+id/fragment_goodsWorks_textView_dividing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/fragment_goodsWorks_imageButton_goods"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_goodsWorks_imageButton_goods"
+        app:layout_constraintStart_toEndOf="@id/fragment_goodsWorks_imageButton_goods"
+        app:layout_constraintEnd_toStartOf="@id/fragment_goodsWorks_imageButton_works"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="@string/fragment_goodsWorks_textView_dividing"/>
+
+    <ImageButton
+        android:id="@+id/fragment_goodsWorks_imageButton_works"
+        app:layout_constraintStart_toEndOf="@id/fragment_goodsWorks_textView_dividing"
+        app:layout_constraintTop_toTopOf="@id/fragment_goodsWorks_imageButton_goods"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_goodsWorks_imageButton_goods"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_works"
+        app:layout_constraintHorizontal_weight="5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/fragment_goodsWorks_imageButton_works" />
+
+    <TextView
+        android:id="@+id/fragment_goodsWorks_textView_empty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_goodsWorks_textView_empty"
+        android:textColor="@android:color/black"
+        android:visibility="gone"/>
+
+    <io.github.grooters.idles.view.widget.LoadingWidget
+        android:id="@+id/goodsWorksFragment_textView_loading"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
